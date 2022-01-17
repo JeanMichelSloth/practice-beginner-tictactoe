@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    flex-direction: column;
+}
+
+/*
+    Trick pour les bordures du jeu :
+    - mettre le background de la grid en noir
+    - mettre le beckground des cases en blanc
+    - gérer l'épaisseur du "trait" avec le gap
+*/
+
+h1 {
+    padding: 2rem;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px 2px;
+    background-color: black;
+    min-width: 265px;
+    min-height: 307px;
+}
+
+.cell {
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: white;
+}
+
+.cell:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+button {
+    margin: 2rem;
+    padding: 1rem;
+    border: solid black 2px;
+    background-color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: rgb(211, 211, 211);
+}
+
+.flex-full-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
